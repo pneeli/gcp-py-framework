@@ -270,6 +270,7 @@ def createBqStoredProcApi(env, proj, filePath, sqlFile):
 		log(f"Stored Procedure Created or Replaced","INFO")
 	except Exception as e:
 		log(f"Exception : {e}","ERROR")
+		log(f"Failed to create or replace stored procedure","ERROR")
 		raise
 #*************GCP BQ CREATE OR REPLACE STORED PROCEDURE DEFINITION END****************#
 
@@ -289,6 +290,7 @@ def runBqStoredProcApi(env, proj, dataSet, storedProc, arguments=''):
 		log(f"Executed Stored Procedure Successfully","INFO")
 	except Exception as e:
 		log(f"Exception : {e}","ERROR")
+		log(f"Failed to run stored procedure","ERROR")
 		raise
 #*************GCP BQ EXECUTE STORED PROCEDURE DEFINITION END****************#
 
